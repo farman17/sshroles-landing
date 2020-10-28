@@ -1,0 +1,15 @@
+- name: create folder sosmed
+  file:
+    path: /var/www/{{ main_domain_name }}/{{ folder_web }}/
+    state: directory
+    mode: '0755'
+
+- name: install git
+  apt:
+    name: git
+
+- name: Deploy sample html file 
+  git:
+    repo: '{{ github_repo }}'
+    dest: /var/www/{{ main_domain_name }}/{{ folder_web }}/
+    

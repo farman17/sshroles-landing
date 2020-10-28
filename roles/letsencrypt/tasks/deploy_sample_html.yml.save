@@ -1,0 +1,12 @@
+- name: create folder sosmed
+  file:
+    path: /var/www/{{ main_domain_name }}/sosial-media/
+    state: directory
+    mode: '0755'
+
+
+- name: Deploy sample html file (a.singlediv.com by Lynn Fisher)
+  copy:
+    repo: https://github.com/farman17/landingpage-1.git
+    dest: /var/www/{{ main_domain_name }}/sosial-media
+    mode: u=rw,g=r,o=r
