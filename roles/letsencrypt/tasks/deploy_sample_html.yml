@@ -1,4 +1,4 @@
-- name: create folder sosmed
+- name: create folder {{ folder_web }}
   file:
     path: /var/www/{{ main_domain_name }}/{{ folder_web }}/
     state: directory

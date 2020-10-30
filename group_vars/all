@@ -9,6 +9,7 @@ email_letsencrypt: ahmadfarman1701@gmail.com
 
 # Github repository
 github_repo:  https://github.com/sdcilsy/landing-page.git
+
 #Folder for Deploy Website
 folder_web: landingku
 
