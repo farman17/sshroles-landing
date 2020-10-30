@@ -1,7 +1,24 @@
 - hosts: webservers
   become: true
-  gather_facts: False
+  gather_facts: true
 
   roles:
     - role: nginx
     - role: php
+
+    - role: secure_server
+      vars:
+        hashed_deploy_user_password: $6$8alcM6/bp86XtR$fui1ie6z9E83oi/HxYdL0ksT7q7NhcLGW4CZEGbN7pYlL1SiXZHVRv5/kFtYeTgzNtnyQstTuePHKH5Pj4mZp.
+        login_ssh_public_key_filename: id_rsa.pub
+        has_deployment_keys: true
+        has_ssh_config: true
+
+    
+    - role: letsencrypt
+      vars:
+        letsencrypt_email: ahmadfarman1701@gmail.com
+        main_domain_name: sosialmedia.dailybugis.my.id
+        all_domain_names:
+            - sosialmedia.dailybugis.my.id
+       
+        deploy_sample_html: true
