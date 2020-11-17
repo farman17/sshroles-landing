@@ -17,8 +17,8 @@
     - role: letsencrypt
       vars:
         letsencrypt_email: ahmadfarman1701@gmail.com
-        main_domain_name: sosialmedia.dailybugis.my.id
+        main_domain_name: landingssh.dekkeng.online
         all_domain_names:
-            - sosialmedia.dailybugis.my.id
+            - landingssh.dekkeng.online
        
         deploy_sample_html: true
